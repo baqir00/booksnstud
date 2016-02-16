@@ -31,7 +31,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">BooksNstud</a>
+      <a class="navbar-brand" href="<?php echo base_url()?>">BooksNstud</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -74,9 +74,9 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-          <form class="navbar-form navbar-left">
-          <button type="submit" class="btn btn-danger">&nbsp;<strong>POST AN AD</strong>&nbsp;</button>
-            </form>
+          <div class="navbar-form navbar-right"><a href="<?php echo base_url()?>index.php/Welcome/post">
+            <button type="submit" class="btn btn-danger">&nbsp;<strong>POST AN AD</strong>&nbsp;</button></a>
+          </div>
       </ul>
     </div>
   </div>
@@ -93,35 +93,35 @@
         <h4 class="modal-title">Select City</h4>
       </div>
       <div class="modal-body">
-        <ul>
+        <ul class="list-group">
             <div class="row">
                 <div class="col-md-3">
-                    <li>Lucknow</li>
-                    <li>Lucknow</li>
-                    <li>Lucknow</li>
-                    <li>Lucknow</li>
-                    <li>Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
                 </div>
                 <div class="col-md-3">
-                    <li>Lucknow</li>
-                    <li>Lucknow</li>
-                    <li>Lucknow</li>
-                    <li>Lucknow</li>
-                    <li>Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
                 </div>
                 <div class="col-md-3">
-                    <li>Lucknow</li>
-                    <li>Lucknow</li>
-                    <li>Lucknow</li>
-                    <li>Lucknow</li>
-                    <li>Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
                 </div>
                 <div class="col-md-3">
-                    <li>Lucknow</li>
-                    <li>Lucknow</li>
-                    <li>Lucknow</li>
-                    <li>Lucknow</li>
-                    <li>Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
+                    <li class="list-group-item">Lucknow</li>
                 </div>
             </div>
         </ul>
