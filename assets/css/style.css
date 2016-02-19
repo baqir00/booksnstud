@@ -2,3 +2,7 @@
     padding-left:30px;
     padding-right:30px;
 }
+
+span.glyphicon-map-marker {
+    font-size: 95%;
+}
