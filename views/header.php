@@ -75,7 +75,7 @@
                 <button type="submit" class="btn btn-default btn-sm">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <div class="navbar-form navbar-right"><a href="index.php/post">
+                <div class="navbar-form navbar-right"><a href="post">
                         <button type="submit" class="btn btn-danger">&nbsp;<strong>POST AN AD</strong>&nbsp;</button></a>
                 </div>
             </ul>
