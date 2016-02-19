@@ -27,4 +27,46 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('post');
 	}
+
+	public function upload_add()
+{
+    $post=$this->input->post(NULL,TRUE);
+    //echo $post['userfile'];
+     
+    $tmp=$_FILES['userfile']['name'];
+    $ext = $ext = pathinfo($tmp, PATHINFO_EXTENSION);
+    $config['upload_path'] = '/opt/lampp/htdocs/booksnstud/assets/images/';
+    $config['allowed_types'] = 'gif|jpg|png';
+    $config['max_size'] = '1000';
+    $config['max_width']  = '2400';
+    $config['max_height']  = '1000';
+    $config['file_name'] = $post['title'].'_'.time().'.'.$ext;
+         
+    $this->load->library('upload', $config);
+
+   
+      if ( ! is_really_writable($config['upload_path']))
+    {
+        //$this->set_error('upload_not_writable');
+        echo "Not writatable directory";
+    }
+
+    if ( ! $this->upload->do_upload('userfile'))
+    {
+      $error = array('error' => $this->upload->display_errors());
+    echo "Something went wrong!! :! ";
+    foreach ($error as $key => $value) {
+        echo $value;
+        echo $config['upload_path'];
+      }
+    }
+
+    
+    else
+    {
+     $this->load->model('upload_add_model');
+     $this->upload_add_model->new_add($post);
+    
+    }
+  }
 }
