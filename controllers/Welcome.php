@@ -20,7 +20,9 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('home');
+        $this->load->model('show_model');
+        $data['result'] = $this->show_model->show();
+		$this->load->view('home',$data);
 	}
 
 	public function post()
@@ -35,12 +37,13 @@ class Welcome extends CI_Controller {
      
     $tmp=$_FILES['userfile']['name'];
     $ext = $ext = pathinfo($tmp, PATHINFO_EXTENSION);
-    $config['upload_path'] = '/opt/lampp/htdocs/booksnstud/assets/images/';
+    $config['upload_path'] = 'C:/wamp/www/booksnstud/assets/images/';
     $config['allowed_types'] = 'gif|jpg|png';
     $config['max_size'] = '1000';
     $config['max_width']  = '2400';
     $config['max_height']  = '1000';
-    $config['file_name'] = $post['title'].'_'.time().'.'.$ext;
+
+    $name=$config['file_name'] = str_replace(' ', '_',$post['title']).'_'.time().'.'.$ext;
          
     $this->load->library('upload', $config);
 
@@ -65,8 +68,10 @@ class Welcome extends CI_Controller {
     else
     {
      $this->load->model('upload_add_model');
+        $post['name'] = $name;
      $this->upload_add_model->new_add($post);
     
     }
+    redirect('/');
   }
 }
