@@ -54,9 +54,9 @@
                     </ul>
                 </li>
                 <li><a href="#">Products</a></li>
-                <li><a href="#">Material</a></li>
+                <li><a href="#">Study Material</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Exams<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Exam Reviews<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">IIT-JEE</a></li>
                         <li><a href="#">AIPMT</a></li>
@@ -70,18 +70,24 @@
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
                     <input type="text" class="form-control input-sm" placeholder="Search">
-                    <a class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-map-marker"></span> </a>
+                    <a class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal">Aligarh</a>
                 </div>
                 <button type="submit" class="btn btn-default btn-sm">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <div class="navbar-form navbar-right"><a href="post">
-                        <button type="submit" class="btn btn-danger">&nbsp;<strong>POST AN AD</strong>&nbsp;</button></a>
+                        <button type="submit" class="btn btn-danger btn-lg">&nbsp;<strong>POST AN AD</strong>&nbsp;</button></a>
                 </div>
             </ul>
         </div>
     </div>
 </nav>
+
+<script type="text/javascript">
+    function func() {
+        window.alert("Hello");
+    }
+</script>>
 
 
 <div id="myModal" class="modal fade" role="dialog">
@@ -97,7 +103,7 @@
                 <ul class="list-group">
                     <div class="row">
                         <div class="col-md-3">
-                            <li class="list-group-item">Lucknow</li>
+                            <li class="list-group-item"><a href="#"  onclick="func()">Lucknow</a></li>
                             <li class="list-group-item">Lucknow</li>
                             <li class="list-group-item">Lucknow</li>
                             <li class="list-group-item">Lucknow</li>
